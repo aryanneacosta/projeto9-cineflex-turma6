@@ -1,22 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Sessions from './Sessions';
+import Movies from './Movies';
 
 export default function Home() {
-
-    function Movies({ movies, idFilme }) {
-        return (
-            <Link to={`/sessoes/${idFilme}`}>
-                <div className="movie">
-                    <img src={movies} alt="filme" />
-                    {/* imagens da API */}
-                </div>
-            </Link>
-        );
-    }
 
     const [movies, setMovies] = useState([]);
 
