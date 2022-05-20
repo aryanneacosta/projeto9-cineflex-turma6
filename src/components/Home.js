@@ -1,13 +1,37 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Sessions from './Sessions';
+
 export default function Home() {
+
+    function Movies({ movies, idFilme }) {
+        return (
+            <Link to={`/sessoes/${idFilme}`}>
+                <div className="movie">
+                    <img src={movies} alt="filme" />
+                    {/* imagens da API */}
+                </div>
+            </Link>
+        );
+    }
+
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        const promise = axios.get("https://mock-api.driven.com.br/api/v5/cineflex/movies");
+        promise.then((resposta) => {
+            setMovies([...resposta.data]);
+        });
+    }, []);
+
     return (
         <>
             <div className="top">Selecione o filme</div>
             <div className="movies">
-                <div className="movie">
-                    <img src="https://ingresso-a.akamaihd.net/prd/img/movie/doutor-estranho-no-multiverso-da-loucura/29239d6e-2fb6-40ae-8f5d-1a1b70c3e681.jpg" alt="filme" />
-                    {/* imagens da API */}
-                </div>
-
+                {movies.map(movie => <Movies movies={movie.posterURL} idFilme={movie.id}/>)}
             </div>
         </>
     );

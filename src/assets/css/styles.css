@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    position: relative;
 }
 
 header {
@@ -49,3 +50,67 @@ header {
     height: 193px;
     width: 129px;
 }
+
+.opcoes {
+    margin-left: 25px;
+}
+
+.opcoes>.data {
+    font-size: 20px;
+    color: #293845;
+}
+
+.horarios {
+    display: flex;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.horario {
+    height: 43px;
+    width: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: #E8833A;
+    color: #FFFFFF;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+footer {
+    height: 116px;
+    width: 100%;
+    background-color: #9EADBA;
+    border-top: #9EADBE;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.poster-footer {
+    height: 90px;
+    width: 64px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.poster-footer>img {
+    height: 72px;
+    width: 48px;
+}
+
+.titulo-footer, .sessao-footer {
+    color: #293845;
+    font-size: 26px;
+    margin-left: 14px;
+}
+
+

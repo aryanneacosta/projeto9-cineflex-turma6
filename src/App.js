@@ -3,6 +3,7 @@ import reset from "./assets/css/reset.css";
 import styles from "./assets/css/styles.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Sessions from "./components/Sessions";
 
 export default function App() {
     return (
@@ -10,6 +11,7 @@ export default function App() {
         <Header/>
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/sessoes/:idFilme" element={<Sessions />} />
             </Routes>
         </BrowserRouter>
     );
