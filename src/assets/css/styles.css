@@ -107,10 +107,77 @@ footer {
     width: 48px;
 }
 
+.texto-footer {
+    display: flex;
+    flex-direction: column;
+}
+
 .titulo-footer, .sessao-footer {
     color: #293845;
     font-size: 26px;
     margin-left: 14px;
 }
 
+.assentos {
+    width: 330px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
 
+.assento {
+    height: 26px;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+    margin-right: 4px;
+    margin-bottom: 18px;
+    font-size: 12px;
+}
+
+.assento, .bolinha {
+    border-radius: 50%;
+}
+
+.selecionado {
+    background-color: #8DD7CF;
+    border: 1px solid #45BDB0;
+}
+
+.disponivel {
+    background-color: #C3CFD9;
+    border: 1px solid #808F9D;
+}
+
+.indisponivel {
+    background-color: #FBE192;
+    border: 1px solid #F7C52B;
+}
+
+.guia {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.guia-assentos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bolinha {
+    height: 25px;
+    width: 25px;
+}
+
+.status {
+    color: #293845;
+    font-size: 13px;
+    margin-top: 10px;
+}

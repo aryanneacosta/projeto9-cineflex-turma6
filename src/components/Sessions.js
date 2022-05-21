@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Footer from './Footer';
 import Days from './Days';
@@ -34,7 +33,8 @@ export default function Sessions() {
 
                 </div>
             </div>
-            <Footer poster={movie.posterURL} titulo={movie.title} />
+            <Footer poster={movie.posterURL} 
+                    titulo={movie.title} />
         </>
     );
 }
