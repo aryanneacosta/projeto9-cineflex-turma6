@@ -21,6 +21,7 @@ header {
     height: 100px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 24px;
@@ -103,8 +104,10 @@ footer {
 }
 
 .poster-footer>img {
-    height: 72px;
-    width: 48px;
+    height: 76px;
+    width: 52px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0.3em grey;
 }
 
 .texto-footer {
@@ -180,4 +183,68 @@ footer {
     color: #293845;
     font-size: 13px;
     margin-top: 10px;
+}
+
+.input {
+    margin-top: 40px;
+    margin-left: 34px;
+}
+
+.nome-comprador, .cpf-comprador {
+    font-size: 18px;
+    color: #293845;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+input {
+    border: 1px solid #D4D4D4;
+    height: 51px;
+    width: 327px;
+    margin-top: 10px;
+}
+
+::placeholder {
+    font-size: 18px;
+    color: #AFAFAF;
+    font-style: italic;
+}
+
+.botoes {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.botao {
+    height: 42px;
+    width: 225px;
+    background-color: #E8833A;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sucesso {
+    color: #247A6B;
+    font-weight: 700;
+}
+
+.infos {
+    margin-left: 30px;
+    margin-top: 30px;
+    color: #293845;
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.texto {
+    font-size: 22px;
 }

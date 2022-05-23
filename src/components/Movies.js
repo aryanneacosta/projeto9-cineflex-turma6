@@ -5,7 +5,6 @@ export default function Movies({ movies, idFilme }) {
         <Link to={`/sessoes/${idFilme}`}>
             <div className="movie">
                 <img src={movies} alt="filme" />
-                {/* imagens da API */}
             </div>
         </Link>
     );

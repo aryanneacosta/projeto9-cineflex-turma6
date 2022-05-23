@@ -25,10 +25,11 @@ export default function Sessions() {
             <div className='sessoes'>
                 <div className='top'>Selecione o horário</div>
                 <div className='opcoes'>
-                    {date.map(date => <Days 
+                    {date.map((date, index) => <Days 
                         day={date.weekday} 
                         date={date.date} 
-                        data={date}/>
+                        data={date}
+                        index={index}/>
                     )}
 
                 </div>

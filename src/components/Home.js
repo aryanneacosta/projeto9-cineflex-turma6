@@ -18,7 +18,7 @@ export default function Home() {
         <>
             <div className="top">Selecione o filme</div>
             <div className="movies">
-                {movies.map(movie => <Movies movies={movie.posterURL} idFilme={movie.id}/>)}
+                {movies.map((movie, index) => <Movies movies={movie.posterURL} idFilme={movie.id} index={index}/>)}
             </div>
         </>
     );

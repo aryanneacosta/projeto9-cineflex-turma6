@@ -15,7 +15,7 @@ export default function Days({ day, date, data }) {
         <>
             <div className='data'>{day} - {date}</div>
             <div className='horarios'>
-                {time.map(time => <Time time={time.name} idSession={time.id}/>)}
+                {time.map((time, index) => <Time time={time.name} idSession={time.id} index={index}/>)}
             </div>
         </>
     );

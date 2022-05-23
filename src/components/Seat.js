@@ -1,17 +1,31 @@
 import { useState } from "react";
 
-export default function Seat ({ seat, avaiable }) {
+export default function Seat({ id, seat, available }) {
 
-    const [isAvaiable, setIsAvaiable] = useState([avaiable]);
+    const [clicked, setClicked] = useState(false);
 
-    if (!isAvaiable) {
+
+    if (!available) {
         return (
-            <div className="assento indisponivel">{seat}</div>
+            <div className="assento indisponivel"
+                onClick={() => {
+                    alert("Esse assento não está disponível")
+                }}
+            >{seat}</div>
         );
     } else {
-        return (
-            <div className="assento disponivel">{seat}</div>
-        );
+        if (!clicked) {
+            return (
+                <div className="assento disponivel" onClick={() => setClicked(!clicked)}
+                > {seat}</div>
+            )
+        } else {
+
+            return (
+                <div className="assento selecionado" onClick={() => setClicked(!clicked)}
+                > {seat}</div>
+            )
+        }
     }
-    
+
 }

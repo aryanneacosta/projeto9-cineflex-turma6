@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Seats from "./components/Seats";
 import Sessions from "./components/Sessions";
+import Success from "./components/Success";
 
 export default function App() {
     return (
@@ -14,6 +15,7 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/sessoes/:idFilme" element={<Sessions />} />
                 <Route path="/assentos/:idSessao" element={<Seats />} />
+                <Route path="/sucesso" element={<Success />} />
             </Routes>
         </BrowserRouter>
     );
